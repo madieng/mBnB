@@ -1,11 +1,10 @@
-
 let express = require('express')
 require('./config/db')
 
 let app = express()
 
 app.use('/', require('./routes/index'))
-app.use('/api/ads', require('./routes/ad'))
+app.use('/api/v1/ads', require('./routes/ad'))
 
 let port = 3000
 app.listen(port, () => {

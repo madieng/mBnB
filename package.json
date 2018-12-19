@@ -4,7 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "fixtures": "node fixtures/load.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +15,7 @@
     "faker": "^4.1.0",
     "mongoose": "^5.4.0",
     "node-mongoose-fixtures": "^0.3.0",
+    "nodemon": "^1.18.9",
     "slugify": "^1.3.4"
   }
 }

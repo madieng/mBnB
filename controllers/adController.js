@@ -1,13 +1,14 @@
 let Ad = require('../models/ad')
 let Image = require('../models/image')
+let { success, error } = require('../services/functions')
 
 // Display list of all Ads.
 exports.ad_list = function(req, res) {
     Ad.find({}, null, { skip: 0, limit: 10}).populate('images').then((ads) => {
-        res.send(ads)
+        res.json(success(ads))
     }, 
     (err) => {
-        throw err
+        res.json(error("Il y a eu une erreur lors de la récupération des annonces."))
     })
 };
 
