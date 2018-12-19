@@ -17,29 +17,14 @@ exports.ad_detail = function(req, res) {
     res.send('NOT IMPLEMENTED: ad detail: ' + req.params.id);
 };
 
-// Display ad create form on GET.
-exports.ad_create_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: ad create GET');
-};
-
 // Handle ad create on POST.
 exports.ad_create_post = function(req, res) {
     res.send('NOT IMPLEMENTED: ad create POST');
 };
 
-// Display ad delete form on GET.
-exports.ad_delete_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: ad delete GET');
-};
-
 // Handle ad delete on POST.
 exports.ad_delete_post = function(req, res) {
     res.send('NOT IMPLEMENTED: ad delete POST');
-};
-
-// Display ad update form on GET.
-exports.ad_update_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: ad update GET');
 };
 
 // Handle ad update on POST.

@@ -14,9 +14,11 @@ let adSchema = new mongoose.Schema({
 
 adSchema.virtual('images', {
     ref: 'Image',
-    localField: 'images',
-    foreignField: '_id'
+    localField: '_id',
+    foreignField: 'ad'
 })
+adSchema.set('toObject', { virtuals: true });
+adSchema.set('toJSON', { virtuals: true });
 
 let Ad = mongoose.model('Ad', adSchema)
 
