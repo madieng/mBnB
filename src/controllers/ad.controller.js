@@ -10,8 +10,9 @@ exports.ad_list = async (req, res) => {
 };
 
 // Display detail page for a specific ad.
-exports.ad_detail = function(req, res) {
-    res.send('NOT IMPLEMENTED: ad detail: ' + req.params.id);
+exports.ad_detail = async (req, res) => {
+    let ad = await AdRepo.getById(req.params.id)
+    res.json(checkAndReturn(ad))
 };
 
 // Handle ad create on POST.
