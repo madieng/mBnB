@@ -1,5 +1,5 @@
 let fixtures = require('node-mongoose-fixtures')
-require('../config/db')
+require('../../config/db')
 let Ad = require('../models/ad')
 let Image = require('../models/image')
 let ads = require('../fixtures/ad')

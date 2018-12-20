@@ -1,5 +1,5 @@
 let router = require('express').Router()
-let ad_controller = require('../controllers/adController')
+let ad_controller = require('../controllers/ad.controller')
 
 router.route('/')
     .get(ad_controller.ad_list)

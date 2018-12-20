@@ -11,3 +11,11 @@ exports.error = (message) => {
         'message': message
     }
 }
+
+exports.isErr = (obj) => {
+    return obj instanceof Error
+}
+
+exports.checkAndReturn = (obj) => {
+    return this.isErr(obj) ? this.error(obj.message) : this.success(obj)
+}
